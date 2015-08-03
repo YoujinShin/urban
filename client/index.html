@@ -1,0 +1,57 @@
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen"/>
+<link rel="stylesheet" href="stylesheets/font-awesome/css/font-awesome.min.css">
+
+<title>URBAN LENS</title>
+</head>
+
+<body>
+	<!-- <div id="left_nav"></div> -->
+	<!-- <div class="left_title"></div> -->
+
+	<h1> URBAN LENS 
+		<span style="font-weight:300; letter-spacing: 0px; font-size: 12px">| BBVA Index</span> 
+	</h1>
+
+	<div id="official_window"></div>
+
+	<button id="heatmap">
+		<img src="bar.png" style="width:14px !important">
+	</button>
+
+	<button id="dataviz">
+		<img src="viz2.png" style="width:14px !important">
+	</button>
+
+	<button id="clusterviz">
+		<img src="cluster.png" style="width:14px !important">
+	</button>
+
+	{{#Layout template="layout"}}
+	{{/Layout}}
+
+	<div id="about_nav" style="left: 20px;">i</div>
+	<div id="about_page">
+		<span style="font-size:14px">Urban Lense</span> 
+		<hr style="border: 0;height: 1px; background-color: white; margin-top: 8px; margin-bottom:12px">
+		In this collaborative project of MIT and BBVA we perform comparative quantitative analysis of city microeconomics, aiming to see how bigger economical patterns could be understood starting from individual economical transactions. This is especially relevant as in the modern world not only businesses but also entire neighborhoods, cities and regions compete for opportunities and investment resources. In this competition it is very important to be able to quantify the current location success in comparison with the others and more importantly – the existing development potential. And bank’s data is unique for that purpose providing direct measurements for a number of aspects of human economical activity at a very fine-grained scale. Given the existing advanced real-time data infrastructure in BBVA it creates a really exciting opportunity.
+		<br><br>By combining simpler quantities (total per capita or per sq. km spending, fraction of foreign tourists in the area) with more sophisticated ones (such as diversity of individual shopping patterns, business crossover through shared customers, individual mobility) we’ll aim to uncover different performance aspects of geographic areas at different spatial and temporal scales. Initial validations on the larger scale of provinces are provided for efficiently predicting official statistical quantities: such as GDP, housing price level, unemployment rate, crime rate, percentage of higher education, and life expectancy. 
+		<br><br>The application enables a comparative exploration of the statistical characteristics of Spanish provinces together with the indicators that are included into the Urban Lense methodology.
+
+	</div>
+	<!-- <div id="bottom_nav" style="left: 106px;">Press</div> -->
+
+	<div id="button_official"> + </div>
+
+	<div id="viz_official">
+		<!-- <div id="title_official">Official Indicators</div> 
+		<hr style="position: relative; width: 80%; left: 10%; border: none; background-color: rgba(255,255,255,0.32); height: 1px;"> -->
+	</div>
+</body>
+
+<template name="layout">
+	{{> yield}}
+</template>

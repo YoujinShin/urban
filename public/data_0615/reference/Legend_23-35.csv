@@ -1,0 +1,14 @@
+indicator,get,description
+Percentage of area’s residents nighttime spending,Percentage of area’s residents nighttime spending,Density of number of transactions made by people inside their province between 10:00pm and 6:00am
+Percentage of area’s residents weekend spending ,Percentage of area’s residents weekend spending ,Density of number of transactions made by people inside their province Suturday and Sunday
+Percentage of area’s residents nighttime money spending ,Percentage of area’s residents nighttime money spending ,Money spent by people inside their province between 10:00pm and 6:00am
+ Percentage of area’s residents weekend money spending , Percentage of area’s residents weekend money spending ,Money spent by people inside their province Suturday and Sunday
+Percentage of area’s nighttime earnings ,Percentage of area’s nighttime earnings ,Average activity (money) of the area residents between 10:00pm and 6:00am
+Percentage of area’s residents weekend earnings ,Percentage of area’s residents weekend earnings ,Average activity (money) of the area residents Suturday and Sunday
+Percentage of area’s nighttime business transactions ,Percentage of area’s nighttime business transactions ,Average activity (number of transactions) of the area residents between 10:00pm and 6:00am
+ Percentage of area’s residents weekend transactions , Percentage of area’s residents weekend transactions ,Average activity (number of transactions) of the area residents Suturday and Sunday
+Percentage of area residents’ activity performed outside the province,Percentage of area residents’ activity performed outside the province,Density of number of transactions made by people outside their residence province of residence
+Percentage of out area residents’ activity performed inside the province,Percentage of out area residents’ activity performed inside the province,Density of number of transactions recived in business of one province from customerse that live outside that province
+Percentage of money spent by area residents outside their province ,Percentage of money spent by area residents outside their province ,Money spent made by people outside their residence province of residence
+ Percentage of money spent by out of area residents inside a province , Percentage of money spent by out of area residents inside a province ,Money gained by business of one province from customerse that live outside that province
+ Area’s residents spending in expensive locations., Area’s residents spending in expensive locations.,Transctions in businesse where theaverage transaction amount is above average for the corresponding business category
