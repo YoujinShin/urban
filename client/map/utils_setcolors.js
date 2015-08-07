@@ -172,7 +172,7 @@ setLayerStyle = function(layer, type, alpha) {
 
 			style={
 				weight: 1,
-				fillOpacity: 0.62,//0.5
+				fillOpacity: 0.5,//0.5
 				color: '#fff',
 				fillColor: selectedColor,
 				active:true,
