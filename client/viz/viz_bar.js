@@ -11,11 +11,11 @@ drawBar = function() {
 
 	xScale = d3.scale.linear()
 		.domain([0, 52])
-		.range([ -viz_width/2 + 40, viz_width/2 - 60]);
+		.range([ -viz_width/2 + 50, viz_width/2 - 70]);
 
 	yScale = d3.scale.linear()
 		.domain([0, 1])
-		.range([ viz_height/2 - viz_height*0.26, -viz_height/2 + viz_height*0.34]);
+		.range([ viz_height/2 - viz_height*0.26, -viz_height/2 + viz_height*0.39]);
 		// .range([ viz_height/2 - 160, -viz_height/2 + 230]);
 
 	makeBarGuide();
@@ -36,7 +36,7 @@ drawBar = function() {
 				})
 				.style('fill', 'rgba(200,200,200,0.5)')
 				.style('fill-opacity', 0.9)
-				.attr('stroke', 'rgba(200,200,200,0.5)')
+				// .attr('stroke', 'rgba(200,200,200,0.5)')
 				.on("mouseover", function(d) {
 					d3.select(this).style("fill", "#ff4081");
 

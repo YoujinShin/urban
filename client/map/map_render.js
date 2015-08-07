@@ -31,6 +31,7 @@ Template.map.rendered= function() {
 
 	var base_layer = L.mapbox.tileLayer('examples.map-20v6611k');
 	base_layer.addTo(map);
+	base_layer.setOpacity(0.94);
 
 	// map.setView([mapSettings.coordinates[0], mapSettings.coordinates[1], 13]);
 	// map.setOpacity(0.2);

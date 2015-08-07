@@ -27,15 +27,37 @@ $(document).ready(function() {
 		else { hideAbourPage(); }
 	});
 
+	// change cluster type
+	// $('#cluster_commercial').click(function() {
+	// 	console.log('cluster commercial clicked');
+
+	// 	$('#cluster_official').css('border-color', 'rgba(255,255,255,0.3)');
+	// 	$('#cluster_official').css('color', 'rgba(255,255,255,0.3)');
+
+	// 	$('#cluster_commercial').css('border-color', 'rgba(157,184,252,0.93)')
+	// 	$('#cluster_commercial').css('color', 'rgba(157,184,252,0.93)');
+	// });
+
+	// $('#cluster_official').click(function() {
+	// 	console.log('cluster official clicked');
+
+	// 	$('#cluster_commercial').css('border-color', 'rgba(255,255,255,0.3)');
+	// 	$('#cluster_commercial').css('color', 'rgba(255,255,255,0.3)');
+
+	// 	$('#cluster_official').css('border-color', 'rgba(157,184,252,0.93)')
+	// 	$('#cluster_official').css('color', 'rgba(157,184,252,0.93)');
+	// });
+
 
 	// Round Viz
 	$('#dataviz').click(function() {
+		console.log('data viz clicked');
 
 		if(dataviz_clicked == false) { // first time clicked!
 
-			showDataViz();
 			hideBarGraph();
 			hideCluster();
+			showDataViz();
 
 			// map.removeLayer(heatmapLayer);
 			// map.addLayer(shapeLayer);
@@ -59,8 +81,8 @@ $(document).ready(function() {
 			selectedArray = [];
 
 			hideDataViz();
-			showBarGraph();
 			hideCluster();
+			showBarGraph();
 
 			$('#heatmap').css('background-color', 'rgba(255,255,255, 0');
 			$('#dataviz').css('background-color', 'rgba(255,255,255, 0.18');
@@ -104,11 +126,27 @@ showDataViz = function() {
 
 	map.addLayer(shapeLayer);
 
-	g.style('visibility', 'visible');
-	$('.index').css('visibility', 'visible');
-	$('#index_name1').css('visibility', 'visible');
-	$('#index_des1').css('visibility', 'visible');
-	
+	$('#index_collection').css('visibility', 'visible');
+	$('#col_1').css('visibility', 'visible');
+	$('#col_2').css('visibility', 'visible');
+	$('#col_3').css('visibility', 'visible');
+	$('#col_4').css('visibility', 'visible');
+
+	if(collection_num == 4) {
+
+		// $('.index').css('visibility', 'visible');
+		$('#index_name1').css('visibility', 'visible');
+		$('#index_des1').css('visibility', 'visible');
+
+		g_official_norm.style('visibility', 'visible');
+		$('.index_off_norm').css('visibility', 'visible');
+
+	} else {
+		g.style('visibility', 'visible');
+		$('.index').css('visibility', 'visible');
+		$('#index_name1').css('visibility', 'visible');
+		$('#index_des1').css('visibility', 'visible');
+	}
 }
 
 hideDataViz = function() {
@@ -126,6 +164,12 @@ hideDataViz = function() {
 
 	g_official_norm.style('visibility', 'hidden');
 	$('.index_off_norm').css('visibility', 'hidden');
+
+	$('#index_collection').css('visibility', 'hidden');
+	$('#col_1').css('visibility', 'hidden');
+	$('#col_2').css('visibility', 'hidden');
+	$('#col_3').css('visibility', 'hidden');
+	$('#col_4').css('visibility', 'hidden');
 }
 
 //////
@@ -137,6 +181,12 @@ showBarGraph = function() {
 	$('#index_name2').css('visibility', 'visible');
 	$('#index_des2').css('visibility', 'visible');
 	$('.indicator_list').css('visibility', 'visible');
+
+	$('#index_collection').css('visibility', 'visible');
+	$('#col_1').css('visibility', 'visible');
+	$('#col_2').css('visibility', 'visible');
+	$('#col_3').css('visibility', 'visible');
+	$('#col_4').css('visibility', 'visible');
 }
 
 hideBarGraph = function() {
@@ -148,16 +198,33 @@ hideBarGraph = function() {
 	$('#index_des2').css('visibility', 'hidden');
 	$('.indicator_list').css('visibility', 'hidden');
 	$('.indicator_list2').css('visibility', 'hidden');
+
+	$('#index_collection').css('visibility', 'hidden');
+	$('#col_1').css('visibility', 'hidden');
+	$('#col_2').css('visibility', 'hidden');
+	$('#col_3').css('visibility', 'hidden');
+	$('#col_4').css('visibility', 'hidden');
 }
 
 hideCluster = function() {
 
 	map.removeLayer(clusterLayer);
+	g_cluster.style('visibility', 'hidden');
+	$('#title_cluster').css('visibility', 'hidden');
+	$('#cluster_commercial').css('visibility', 'hidden');
+	$('#cluster_official').css('visibility', 'hidden');
 }
 
 showCluster = function() {
 
 	map.addLayer(clusterLayer);
+	g_cluster.style('visibility', 'visible');
+	$('#title_cluster').css('visibility', 'visible');
+	$('#cluster_commercial').css('visibility', 'visible');
+	$('#cluster_official').css('visibility', 'visible');
+
+	// updateCluster();
+	updatePie();
 }
 
 

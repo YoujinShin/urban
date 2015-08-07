@@ -131,11 +131,11 @@ axisGuide_official = function(poly) {
 		.attr('class', 'index_off_norm')
 		.style("top", function(d) { 
 			var th = d.t * 2* d_th + d_th;
-			return getdy(d.t, th)+ "px"; 
+			return getdy(d.t, th)+ 12+"px"; 
 		})
 		.style("right", function(d) { 
 			var th = d.t * 2* d_th + d_th;
-			return viz_width*0.93-getdx(d.t, th) + "px"; 
+			return viz_width*0.93-getdx(d.t, th) + 10+ "px"; 
 		})
 		.text(function(d,i) {  return d.index;  })
 		.on("mouseover", function(d) { getDescription(d.index); })

@@ -186,15 +186,18 @@ button {
 
 .index {
 	position: absolute;
-	font: 10px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font: 8px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
 	font-weight: 300;
 
-	color: rgba(255,255,255,0.48);
+	color: rgba(255,255,255,0.3);
 	letter-spacing: 1px;
 
 	vertical-align: middle;
 	text-align: center !important;
-	width: 84px !important;
+	width: 72px !important;
+	height: 40px;
+
 	z-index: 460;
 	padding: 5px;
 	border-radius: 6px;
@@ -202,21 +205,23 @@ button {
 	background-color: rgba(0,0,0,0.0);
 	border-style: solid;
 	border-width: 2px;
-	line-height: 130%;
-	vertical-align:middle !important;
+	line-height: 126%;
 }
 
 .index_off_norm {
 	position: absolute;
-	font: 10px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font: 8px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
 	font-weight: 300;
 
-	color: rgba(255,255,255,0.48);
+	color: rgba(255,255,255,0.3);
 	letter-spacing: 1px;
 
 	vertical-align: middle;
 	text-align: center !important;
-	width: 84px !important;
+	width: 80px !important;
+	height: 40px;
+
 	z-index: 460;
 	padding: 5px;
 	border-radius: 6px;
@@ -224,8 +229,7 @@ button {
 	background-color: rgba(0,0,0,0.0);
 	border-style: solid;
 	border-width: 2px;
-	line-height: 130%;
-	vertical-align:middle !important;
+	line-height: 126%;
 
 	visibility: hidden;
 }
@@ -369,6 +373,8 @@ button {
 	color: #94aefc; 
 
 	font-family: 'HelveticaN', sans-serif;
+	text-transform: uppercase;
+
 	font-size: 11px;
 	letter-spacing: 1px;
 	fill: #3F51B5;
@@ -381,21 +387,21 @@ button {
 	z-index: 90;
 	right: 20px;
 	bottom: 2%;
-	height: 72px;
+	height: 74px;
 	/*height: 72px;*/
 	width: 28% !important;
 	text-align: left;
-	color: rgba(255,255,255,0.75);
+	color: rgba(255,255,255,0.7);
 	margin-right: 3%;
 
 	font-family: 'HelveticaN', sans-serif;
-	font-size: 11px;
+	font-size: 10px;
 	letter-spacing: 1px;
 	fill: #000;
 	stroke: none;
 	font-weight: 300;
 	width: 100px;
-	line-height: 140%;
+	line-height: 139%;
 }
 
 

@@ -47,10 +47,22 @@ Template.viz.rendered = function() {
 	body = d3.select("body");
 	var div = body.append("div");
 	div.attr("id", "index_collection")
+		// .html("<span id='col_name' style='color:white'>Business Oriented</span>");
 		.html("Commercial Index :: <span id='col_name' style='color:white'>Business Oriented</span>");// 
 		// .html("COMMERCIAL INDEX");// 
 		// .html("Commercial Index <span style='font-weight:300'> Collection </span>");
 
+	body.append('div').attr('id', 'title_cluster')
+		.html('Clusters');
+
+	// body.append('div').attr('id', 'cluster_commercial')
+	// 	.html('Commercial index');
+
+	// cluster_official = body.append('div').attr('id', 'cluster_official')
+	// 	.html('Official index');
+
+
+	// tooltip
 	tooltip = d3.select("body").append("div").attr("id", "tooltip");
 	tooltip2 = d3.select("body").append("div").attr("id", "tooltip2");
 
@@ -81,17 +93,18 @@ Template.viz.rendered = function() {
 
 	d_x = width*0.5 + margin.left;
 	d_y = height*0.52 + margin.top + 0;
+	
 
     // g for arc
 	g = viz_round.append('g')
 		.attr('class', 'g1_class')
 		.attr("transform", "translate(" + d_x  +"," + d_y + ")");
 
-		g.append('line')
-			.attr('x1', -width*0.43).attr('x2', width*0.43)
-			.attr('y1', height*0.34).attr('y2', height*0.34)
-			.attr('stroke', 'rgba(255,255,255,0.5')
-			.attr('stroke-width', 0.8);
+		// g.append('line')
+		// 	.attr('x1', -width*0.43).attr('x2', width*0.43)
+		// 	.attr('y1', height*0.34).attr('y2', height*0.34)
+		// 	.attr('stroke', 'rgba(255,255,255,0.5')
+		// 	.attr('stroke-width', 0.8);
 
 		// index name and description
 		index_name = body.append("div");
@@ -109,11 +122,11 @@ Template.viz.rendered = function() {
 		.attr('class', 'g_official_norm')
 		.attr("transform", "translate(" + d_x  +"," + d_y + ")");
 
-		g_official_norm.append('line')
-			.attr('x1', -width*0.43).attr('x2', width*0.43)
-			.attr('y1', height*0.34).attr('y2', height*0.34)
-			.attr('stroke', 'rgba(255,255,255,0.5')
-			.attr('stroke-width', 0.8);
+		// g_official_norm.append('line')
+		// 	.attr('x1', -width*0.43).attr('x2', width*0.43)
+		// 	.attr('y1', height*0.34).attr('y2', height*0.34)
+		// 	.attr('stroke', 'rgba(255,255,255,0.5')
+		// 	.attr('stroke-width', 0.8);
 
 
 	// g for bar
@@ -121,11 +134,11 @@ Template.viz.rendered = function() {
 		.attr("transform", "translate(" + d_x  +"," + d_y + ")")
 		.style('visibility', 'hidden');
 
-		g_bar.append('line')
-			.attr('x1', -width*0.43).attr('x2', width*0.43)
-			.attr('y1', height*0.34).attr('y2', height*0.34)
-			.attr('stroke', 'rgba(255,255,255,0.5')
-			.attr('stroke-width', 0.8);
+		// g_bar.append('line')
+		// 	.attr('x1', -width*0.43).attr('x2', width*0.43)
+		// 	.attr('y1', height*0.34).attr('y2', height*0.34)
+		// 	.attr('stroke', 'rgba(255,255,255,0.5')
+		// 	.attr('stroke-width', 0.8);
 
 		index_name2 = body.append("div");
 		index_name2.attr("class", "index_name2")
@@ -139,6 +152,12 @@ Template.viz.rendered = function() {
 
 		$('#index_name2').css('visibility', 'hidden');
 		$('#index_des2').css('visibility', 'hidden');
+
+
+	// g for cluster
+	g_cluster = viz_round.append('g')
+		.attr("transform", "translate(" + d_x  +"," + d_y + ")")
+		.style("visibility", "hidden");
 
 
 
@@ -180,7 +199,7 @@ Template.viz.rendered = function() {
 		selectedCollection = collection1;
 
 		radiusGuide();
-		getButton();
+		// getButton();
 
 		drawArc();
 		drawBar();
@@ -221,11 +240,11 @@ axisGuide = function(poly) {
 		.attr('class', 'index')
 		.style("top", function(d) { 
 			var th = d.t * 2* d_th + d_th;
-			return getdy(d.t, th)+ "px"; 
+			return getdy(d.t, th)+ 9 + "px"; 
 		})
 		.style("right", function(d) { 
 			var th = d.t * 2* d_th + d_th;
-			return viz_width*0.93-getdx(d.t, th) + 10+"px"; 
+			return viz_width*0.93-getdx(d.t, th) + 9 +"px"; 
 			// return viz_width-margin.left-margin.right-getdx(d.t, th) + "px"; 
 		})
 		.text(function(d,i) {  return d.index;  })
@@ -241,7 +260,6 @@ axisGuide = function(poly) {
 
 getDescription = function(selectedValue) {
 	selectedValue = selectedValue.replace(/ /g, '');
-	// console.log(selectedValue);
 
 	selectedLegend.forEach(function(d) {
 

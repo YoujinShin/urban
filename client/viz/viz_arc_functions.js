@@ -19,8 +19,11 @@ var order = 0;
 
 getColor = function() {
 
-	var colorLists = ['#F44336', '#E91E63', '#9C27B0', '#3F51B5', 
-					'#2196F3', '#009688', '#4CAF50', '#FF5722' ];
+	// var colorLists = ['#F44336', '#E91E63', '#9C27B0', '#3F51B5', 
+	// 				'#2196F3', '#009688', '#4CAF50', '#FF5722' ];
+
+	var colorLists = ['#3F51B5', '#E91E63', '#F44336', '#9C27B0',
+					'#2196F3', '#009688', '#4CAF50', '#FFEB3B' ];
 
 	order++;
 	if(order > colorLists.length - 1) { order = 0; }

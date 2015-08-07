@@ -7,7 +7,7 @@ radiusGuide = function() {
 	.attr('cx', 0)
 	.attr('cy', 0)
 	.attr('r', rScale(1))
-	.attr('fill', 'rgba(200,200,200,0.5)');g
+	.attr('fill', 'rgba(200,200,200,0.5)');
 
 	for(var i = 0; i <5; i++ ) {
 		var variable = ( i + 1 ) * 0.2;
@@ -54,11 +54,11 @@ getY2 = function(d, t) {
 
 getdy = function(i, th) {
 	var v = 1.26;//1.28
-	return d_y + rScale(v)*Math.sin(th)+10;
+	return d_y + rScale(v)*Math.sin(th);
 }
 
 getdx = function(i, th) {
-	var v = 1.28;
+	var v = 1.26;
 	return d_x + rScale(v)*Math.cos(th);
 }
 
@@ -86,6 +86,8 @@ initCollection = function() {
 				if(dataviz_clicked) {
 					g.style('visibility', 'visible');
 					g_official_norm.style('visibility', 'hidden');
+					$('.index_off_norm').css('visibility', 'hidden');
+					$('.index').css('visibility', 'visible');
 				}
 
 				if(heatmap_clicked) {

@@ -95,10 +95,7 @@ drawArc = function() {
 					.style('fill-opacity', 0.5);
 		});
 
-		// button.style('fill-opacity', 0.6);
-		// button_dot.style('fill', '#fff');
 		unselectDots(selectedCollection);
-
 		selectVizOne2(28);
 }
 
