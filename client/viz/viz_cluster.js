@@ -297,8 +297,13 @@ makeNumbers = function() {
 			.attr('cy', viz_height*0.36)
 			.attr('r', 10)
 			.on('click', function(d) {
+				// console.log(d);
+
 				unselectCircleNum();
-				d3.select(this).attr('stroke', 'rgba(255,255,255,1)');
+				unselectTexts();
+
+				d3.select(this).attr('stroke', 'rgba(157,184,252,0.93)');
+				textNum[d].attr('fill', 'rgba(157,184,252,0.93)');
 
 				legend_num = d + 2;
 				// updateCluster();
@@ -322,6 +327,13 @@ unselectCircleNum = function() {
 		circleNum[i].attr('stroke', 'rgba(255,255,255,0.23)');
 	}
 } 
+
+unselectTexts = function() {
+
+	for(var i = 0; i < 8; i++) { 
+		textNum[i].attr('fill', 'rgba(255,255,255,0.3)');
+	}
+}
 
 // ArcTween for Pie
 arcTween2 = function(a) {
