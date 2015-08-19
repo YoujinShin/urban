@@ -8,6 +8,7 @@ window.about_clicked = true;
 window.roundViz_clicked = true;
 window.officialviz_clicked = false;
 
+window.onresize = function(){ location.reload(); }
 
 $(document).ready(function() {
 
@@ -26,6 +27,11 @@ $(document).ready(function() {
 		if(about_clicked) { showAboutPage(); }
 		else { hideAbourPage(); }
 	});
+
+	// var about_height = d3.select('#about_page').style('height');
+	// var about_bottom = ( $(window).height() - about_height ) /2;
+
+	// d3.select('#about_page').style('bottom', about_bottom + 'px');
 
 	// change cluster type
 	// $('#cluster_commercial').click(function() {
@@ -242,7 +248,6 @@ showOfficialViz_left = function() {
 			[mapSettings.coordinates[0] - 4, mapSettings.coordinates[1] - 4], 
 			[mapSettings.coordinates[0] + 4, mapSettings.coordinates[1] + 4] 
 		], { 
-			// paddingTopLeft: [ 150, 50]
 			paddingTopLeft: [-320, 50]
 		} // [x, y]
 	);
@@ -251,7 +256,7 @@ showOfficialViz_left = function() {
 hideOfficialViz_left = function() {
 	var mapSettings= getMapView(Session.get("currentCity"));
 	
-	d3.select('#button_official').style('background-color', 'rgba(0,0,0,0.32)');
+	d3.select('#button_official').style('background-color', 'rgba(0,0,0,0.22)');
 	d3.select('#viz_official').style('left', -200 + 'px');
 	button_clicked = true;
 
@@ -260,7 +265,6 @@ hideOfficialViz_left = function() {
 			[mapSettings.coordinates[0] - 4, mapSettings.coordinates[1] - 4], 
 			[mapSettings.coordinates[0] + 4, mapSettings.coordinates[1] + 4] 
 		], { 
-			// paddingTopLeft: [0, 50]
 			paddingTopLeft: [-500, 50]
 		} // [x, y]
 	);
@@ -273,13 +277,19 @@ showAboutPage = function() {
 	d3.select('#about_nav').style('background-color', 'rgba(0,0,0,0.6)');
 	d3.select('#about_page').style('left', 76 + 'px');
 	about_clicked = false;
+
+	var about_height = $('#about_page').height();
+	var about_bottom = ( $(window).height() - about_height ) /2;
+
+	console.log(about_bottom);
+	d3.select('#about_page').style('bottom', 30 + 'px');
 }
 
 hideAbourPage = function() {
 	var mapSettings= getMapView(Session.get("currentCity"));
 	
-	d3.select('#about_nav').style('background-color', 'rgba(0,0,0,0.32)');
-	d3.select('#about_page').style('left', -600 + 'px');
+	d3.select('#about_nav').style('background-color', 'rgba(0,0,0,0.22)');
+	d3.select('#about_page').style('left', - $(window).width()*1.1 + 'px');
 	about_clicked = true;
 }
 

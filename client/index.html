@@ -32,18 +32,65 @@
 	{{#Layout template="layout"}}
 	{{/Layout}}
 
-	<div id="about_nav" style="left: 20px;">i</div>
+	
 	<div id="about_page">
-		<span style="font-size:14px">Urban Lense</span> 
-		<hr style="border: 0;height: 1px; background-color: white; margin-top: 8px; margin-bottom:12px">
-		In this collaborative project of MIT and BBVA we perform comparative quantitative analysis of city microeconomics, aiming to see how bigger economical patterns could be understood starting from individual economical transactions. This is especially relevant as in the modern world not only businesses but also entire neighborhoods, cities and regions compete for opportunities and investment resources. In this competition it is very important to be able to quantify the current location success in comparison with the others and more importantly – the existing development potential. And bank’s data is unique for that purpose providing direct measurements for a number of aspects of human economical activity at a very fine-grained scale. Given the existing advanced real-time data infrastructure in BBVA it creates a really exciting opportunity.
-		<br><br>By combining simpler quantities (total per capita or per sq. km spending, fraction of foreign tourists in the area) with more sophisticated ones (such as diversity of individual shopping patterns, business crossover through shared customers, individual mobility) we’ll aim to uncover different performance aspects of geographic areas at different spatial and temporal scales. Initial validations on the larger scale of provinces are provided for efficiently predicting official statistical quantities: such as GDP, housing price level, unemployment rate, crime rate, percentage of higher education, and life expectancy. 
-		<br><br>The application enables a comparative exploration of the statistical characteristics of Spanish provinces together with the indicators that are included into the Urban Lense methodology.
+		<div style="font-family: 'neue'; font-size:18px; font-weight: normal; text-align: center; line-height: 140%;">
+			Explore economical patterns in Spain from individual economic transactions
+		</div>
+		<br>
+
+	The web application enables a comparative exploration of the statistical characteristics of Spanish provinces together with the indicators developed by Urban Lense methodology. The indicators are categorized by attributes, such as ‘Business Oriented’, ‘Customer Oriented’, and ‘Categories of Spending’. 
+
+	<br><br>
+	<div style="font-family:'neue'; font-size: 14px; padding-bottom: 5px">
+	|  How to use the app
+	</div>
+	To allow for easy comparison, the indicators are visualized based on its normalized value. And there are three different modes to explore it. It can also be compared with the official statistics on the left.<br><br>
+
+	<div style="margin-left: 10%;">
+		<span style="font-family:'neue';font-size: 13px;">Comparison mode:</span> Each collection of indicator is visualized as a radial plot on the right. Users can select a province of their interest on the map. When more than two provinces are selected, their commercial activities can be easily compared. <br><br>
+
+		<span style="font-family:'neue';font-size: 13px;">Density map mode:</span> This mode is about spatial distribution of the selected indicator as a density map. When an indicator is selected, the normalized data of it is shown on the map and visualized as a bar graph on the right.<br><br>
+
+		<span style="font-family:'neue';font-size: 13px;">Spatial clusters mode:</span> Provinces are clustered in groups with respect to the similarity in their commercial activities. In the visualization on the right, it shows the overall distribution of clusters among the total of 52 provinces. Number of clusters can be selected between 2 to 9.<br><br>
 	</div>
 
-	<div id="button_official"> + </div>
+	<div style="font-family: 'neue'; font-size: 14px; padding-bottom: 5px">
+	|  Team
+	</div>
 
-	<div id="viz_official"></div>
+	<div class="row">
+		<span style="width: 40%; padding-left: 20px; top: 0px; position: relative; float:left; margin-left: 10%;">
+			<span style="font-family:'neue';font-size: 13px;padding-bottom: 5px">
+			MIT Senseable city lab
+			</span><br>
+			Carlo Ratti -  <span style="">Lab director</span><br>
+			Stanislav Sobolevsky - Project lead <br>
+			Emanuele Massaro - Data analyst<br>
+			Behrooz Hashemian - Data analyst<br>
+			Youjin Shin - Web and visualization
+		</span>
+
+		<span style="width: 50%; padding: 0%; position: relative">
+			<span style="font-family:'neue';font-size: 13px;padding-bottom: 5px">
+			BBVA Spain
+			</span><br>
+			Juan Murillo Arias - Project lead
+		</span>
+	</div>
+
+	</div> <!-- end of about page -->
+	
+	<!-- nav button -->
+	<img src="about_icon2.png" id="about_nav">
+	<img src="viz_icon2.png" id="button_official">
+		<div id="viz_official"></div>
+
+	<!-- logo -->
+	<img src="mit_logo_small.png" id="mit_logo">
+	<div id="logo">+</div>
+	<img src="bbva_logo.png" id="bbva_logo">
+
 </body>
 
 <template name="layout">

@@ -53,12 +53,12 @@ getY2 = function(d, t) {
 }
 
 getdy = function(i, th) {
-	var v = 1.26;//1.28
+	var v = 1.252;//1.28
 	return d_y + rScale(v)*Math.sin(th);
 }
 
 getdx = function(i, th) {
-	var v = 1.26;
+	var v = 1.252;
 	return d_x + rScale(v)*Math.cos(th);
 }
 
@@ -71,7 +71,9 @@ initCollection = function() {
 
 				if(collection4_clicked) { showSelectedArray(); }
 
-				$('#col_1').css('background-color', 'rgba(255,255,255,0.8)');
+
+				// $('#col_1').css('background-color', 'rgba(255,255,255,0.8)');
+				$('#col_1').css('background-color', 'rgba(157,184,252,0.93)');
 				$('#col_2').css('background-color', 'rgba(255,255,255,0.2)');
 				$('#col_3').css('background-color', 'rgba(255,255,255,0.2)');
 				$('#col_4').css('background-color', 'rgba(255,255,255,0.2)');
@@ -107,7 +109,7 @@ initCollection = function() {
 				if(collection4_clicked) { showSelectedArray(); }
 				
 				$('#col_1').css('background-color', 'rgba(255,255,255,0.2)');
-				$('#col_2').css('background-color', 'rgba(255,255,255,0.8)');
+				$('#col_2').css('background-color', 'rgba(157,184,252,0.93)');
 				$('#col_3').css('background-color', 'rgba(255,255,255,0.2)');
 				$('#col_4').css('background-color', 'rgba(255,255,255,0.2)');
 				collection_num = 2;
@@ -143,7 +145,7 @@ initCollection = function() {
 
 				$('#col_1').css('background-color', 'rgba(255,255,255,0.2)');
 				$('#col_2').css('background-color', 'rgba(255,255,255,0.2)');
-				$('#col_3').css('background-color', 'rgba(255,255,255,0.8)');
+				$('#col_3').css('background-color', 'rgba(157,184,252,0.93)');
 				$('#col_4').css('background-color', 'rgba(255,255,255,0.2)');
 				collection_num = 3;
 				number = 11;
@@ -180,7 +182,7 @@ initCollection = function() {
 				$('#col_1').css('background-color', 'rgba(255,255,255,0.2)');
 				$('#col_2').css('background-color', 'rgba(255,255,255,0.2)');
 				$('#col_3').css('background-color', 'rgba(255,255,255,0.2)');
-				$('#col_4').css('background-color', 'rgba(255,255,255,0.8)');
+				$('#col_4').css('background-color', 'rgba(157,184,252,0.93)');
 				collection_num = 4;
 				number = 5;
 

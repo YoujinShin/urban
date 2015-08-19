@@ -42,7 +42,7 @@ drawArc = function() {
 					})
 					.style("fill", c) // pink
 					.style("visibility", 'hidden')
-					.style("fill-opacity",0.45)
+					.style("fill-opacity",0.46)
 					.attr("stroke", c)
 					.style("stroke-opacity", 1)
 					.attr("stroke-width",1.2)

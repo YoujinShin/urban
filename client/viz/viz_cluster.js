@@ -13,6 +13,7 @@ window.pathPie;
 window.pie;
 
 window.clusterC_clicked = true;
+// window.cluster_numbers = 0;
 
 //
 drawCluster = function() {
@@ -45,6 +46,7 @@ drawCluster = function() {
 		clusterC_clicked = true;
 		updatePie();
 		clusterLayer.setStyle( getStyleCluster );
+		updateClusterByNumber();
 	});
 
 	cluster_official.on('click', function() {
@@ -56,6 +58,7 @@ drawCluster = function() {
 		clusterC_clicked = false;
 		updatePie();
 		clusterLayer.setStyle( getStyleCluster );
+		updateClusterByNumber();
 	});
 }
 
@@ -124,6 +127,14 @@ makePie = function() {
 			.attr("d", arcPie)
 			.each(function(d) { this._current = d; })
 			.attr("transform", "translate( 0," + viz_width*0.048 + ")");
+
+
+	cluster_numbers = g_cluster.append('text').attr('id', 'cluster_numbers').text(0)
+		.attr('x', 0).attr('y', 22);
+	cluster_names = g_cluster.append('text').attr('id', 'cluster_names').text('provinces')
+		.attr('x', 0).attr('y', 42);
+
+	updateClusterByNumber();
 }
 
 updatePie = function() {
@@ -146,7 +157,7 @@ getStyleCluster = function(feature) { // for heatmap
 		weight: 1,
 		color: 'white', 
 		opacity: 1,
-		fillOpacity: 0.34,
+		fillOpacity: 0.372,
 		fillColor: getColorCluster(id)
 	};
 }
@@ -301,6 +312,7 @@ makeNumbers = function() {
 
 				unselectCircleNum();
 				unselectTexts();
+				
 
 				d3.select(this).attr('stroke', 'rgba(157,184,252,0.93)');
 				textNum[d].attr('fill', 'rgba(157,184,252,0.93)');
@@ -309,7 +321,8 @@ makeNumbers = function() {
 				// updateCluster();
 				updatePie();
 
-				clusterLayer.setStyle( getStyleCluster );				
+				clusterLayer.setStyle( getStyleCluster );	
+				updateClusterByNumber();			
 			})
 			.style('fill', 'rgba(0,0,0,0)')
 			.attr('stroke', function() {
