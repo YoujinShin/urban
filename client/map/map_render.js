@@ -34,7 +34,7 @@ Template.map.rendered= function() {
 // senseable.b55c5fab (light gray with label)
 	var base_layer = L.mapbox.tileLayer('senseable.b55c5fab'); // mapbox.dark , mapbox.light , senseable.86caab31
 	base_layer.addTo(map);
-	base_layer.setOpacity(0.96);
+	base_layer.setOpacity(0.98);
 
 	// map.setView([mapSettings.coordinates[0], mapSettings.coordinates[1], 13]);
 	// map.setOpacity(0.2);

@@ -16,7 +16,7 @@ $(document).ready(function() {
 	// $('#viz_official').css('bottom', bottom + 'px');
 
 	// Official Viz Left
-	$('#button_official').click(function() {
+	$('#button_nav').click(function() {
 
 		if(button_clicked) { showOfficialViz_left(); }
 		else { hideOfficialViz_left(); }
@@ -239,7 +239,7 @@ showOfficialViz_left = function() {
 	console.log('show official viz left');
 	var mapSettings= getMapView(Session.get("currentCity"));
 
-	d3.select('#button_official').style('background-color', 'rgba(0,0,0,0.6)');
+	d3.select('#button_nav').style('background-color', 'rgba(0,0,0,0.6)');
 	d3.select('#viz_official').style('left', 76 + 'px');
 	button_clicked = false;
 
@@ -256,7 +256,7 @@ showOfficialViz_left = function() {
 hideOfficialViz_left = function() {
 	var mapSettings= getMapView(Session.get("currentCity"));
 	
-	d3.select('#button_official').style('background-color', 'rgba(0,0,0,0.22)');
+	d3.select('#button_nav').style('background-color', 'rgba(0,0,0,0.3)');
 	d3.select('#viz_official').style('left', -200 + 'px');
 	button_clicked = true;
 
@@ -278,17 +278,18 @@ showAboutPage = function() {
 	d3.select('#about_page').style('left', 76 + 'px');
 	about_clicked = false;
 
-	var about_height = $('#about_page').height();
-	var about_bottom = ( $(window).height() - about_height ) /2;
+	// var about_height = $('#about_page').height();
+	// var about_bottom = ( $(window).height() - about_height ) /2;
+	var indicator_bottom = $('.indicators').css('bottom');
 
-	console.log(about_bottom);
-	d3.select('#about_page').style('bottom', 30 + 'px');
+	console.log(indicator_bottom);
+	d3.select('#about_page').style('bottom', $(window).height()*0.044+ 'px');
 }
 
 hideAbourPage = function() {
 	var mapSettings= getMapView(Session.get("currentCity"));
 	
-	d3.select('#about_nav').style('background-color', 'rgba(0,0,0,0.22)');
+	d3.select('#about_nav').style('background-color', 'rgba(0,0,0,0.3)');
 	d3.select('#about_page').style('left', - $(window).width()*1.1 + 'px');
 	about_clicked = true;
 }

@@ -242,7 +242,7 @@ select {
 
 
 /*official_window*/
-#button_official {
+#button_nav {
   font-family: 'neue', sans-serif;
 
   position: absolute;
@@ -250,19 +250,21 @@ select {
   left: 20px;
 
   top: 50%;
-  width: 32px;
-  height: 32px;
-  border-radius: 32px;
+  width: 37px;
+  height: 37px;
+  border-radius: 37px;
 
   color: white;
   cursor:pointer;
+
+  margin-top: -24px;
 
   text-align: center;
   line-height: 200%;
   font-size:16px;
   font-weight: lighter;
   opacity: 1;
-  background-color: rgba(0,0,0,0.22);
+  background-color: rgba(0,0,0,0.3);
 }
 
 #about_nav {
@@ -273,10 +275,10 @@ select {
   left: 20px;
 
   top: 50%;
-  width: 32px;
-  height: 32px;
-  border-radius: 32px;
-  margin-top: 42px;
+  width: 37px;
+  height: 37px;
+  border-radius: 37px;
+  margin-top: 24px;
 
   color: white;
   cursor:pointer;
@@ -287,7 +289,7 @@ select {
   font-weight: lighter;
 
   line-height: 28px;
-  background-color: rgba(0,0,0,0.22);
+  background-color: rgba(0,0,0,0.3);
 }
 
 #viz_official {
@@ -321,7 +323,6 @@ select {
   position: absolute;
   z-index: 700;
   width: 52%;
-  /*height: 480px;*/
 
   left: -110%;
   visibility: visible;

@@ -156,8 +156,9 @@ getStyleCluster = function(feature) { // for heatmap
 	return {
 		weight: 1,
 		color: 'white', 
+		// color: getColorCluster(id), 
 		opacity: 1,
-		fillOpacity: 0.372,
+		fillOpacity: 0.36,
 		fillColor: getColorCluster(id)
 	};
 }
