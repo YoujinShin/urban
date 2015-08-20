@@ -172,8 +172,8 @@ Template.viz.rendered = function() {
 		.defer(d3.csv, '/data_0722/official.csv')
 		.defer(d3.csv, '/data_0722/official_norm.csv')
 		.defer(d3.csv, '/data_0722/official_legend.csv')
-		.defer(d3.csv, '/data_0722/cluster_commercial_new.csv')
-		.defer(d3.csv, '/data_0722/cluster_official_new.csv')
+		.defer(d3.csv, '/data_0722/cluster_commercial_new2.csv')
+		.defer(d3.csv, '/data_0722/cluster_official_new2.csv')
 		.await(renderViz);
 
 
