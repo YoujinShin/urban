@@ -18,7 +18,6 @@ window.clusterC_clicked = true;
 //
 drawCluster = function() {
 
-
 	clusterC.forEach(function(e) { e.PROV_ID = + e.PROV_ID; });
 	clusterO.forEach(function(e) { e.PROV_ID = + e.PROV_ID; });
 
@@ -309,12 +308,10 @@ makeNumbers = function() {
 			.attr('cy', viz_height*0.36)
 			.attr('r', 10)
 			.on('click', function(d) {
-				// console.log(d);
 
 				unselectCircleNum();
 				unselectTexts();
 				
-
 				d3.select(this).attr('stroke', 'rgba(157,184,252,0.93)');
 				textNum[d].attr('fill', 'rgba(157,184,252,0.93)');
 
