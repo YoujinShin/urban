@@ -69,9 +69,14 @@ $(document).ready(function() {
 			// map.addLayer(shapeLayer);
 			map.removeLayer(clusterLayer);
 
-			$('#heatmap').css('background-color', 'rgba(255,255,255, 0.18');
-			$('#dataviz').css('background-color', 'rgba(255,255,255, 0');
-			$('#clusterviz').css('background-color', 'rgba(255,255,255, 0.18');
+			$('#heatmap').css('background-color', 'rgba(255,255,255, 0.18)');
+			$('#dataviz').css('background-color', 'rgba(255,255,255, 0)');
+			$('#clusterviz').css('background-color', 'rgba(255,255,255, 0.18)');
+
+			// d3.select('#heatmap').style('background-color', 'rgba(0,0,0,0.18)');
+			// d3.select('#dataviz').style('background-color', 'rgba(0,0,0,0)');
+			// d3.select('#clusterviz').style('background-color', 'rgba(0,0,0,0.18)');
+
 			dataviz_clicked = true;
 			heatmap_clicked = false;
 			clusterviz_clicked = false;
@@ -90,9 +95,13 @@ $(document).ready(function() {
 			hideCluster();
 			showBarGraph();
 
-			$('#heatmap').css('background-color', 'rgba(255,255,255, 0');
-			$('#dataviz').css('background-color', 'rgba(255,255,255, 0.18');
-			$('#clusterviz').css('background-color', 'rgba(255,255,255, 0.18');
+			$('#heatmap').css('background-color', 'rgba(255,255,255, 0)');
+			$('#dataviz').css('background-color', 'rgba(255,255,255, 0.18)');
+			$('#clusterviz').css('background-color', 'rgba(255,255,255, 0.18)');
+
+			// d3.select('#heatmap').style('background-color', 'rgba(0,0,0,0)');
+			// d3.select('#dataviz').style('background-color', 'rgba(0,0,0,0.18)');
+			// d3.select('#clusterviz').style('background-color', 'rgba(0,0,0,0.18)');
 
 			heatmap_clicked = true;
 			dataviz_clicked = false;
@@ -116,9 +125,9 @@ $(document).ready(function() {
 			hideBarGraph();
 			showCluster();
 
-			$('#heatmap').css('background-color', 'rgba(255,255,255, 0.18');
-			$('#dataviz').css('background-color', 'rgba(255,255,255, 0.18');
-			$('#clusterviz').css('background-color', 'rgba(255,255,255, 0');
+			$('#heatmap').css('background-color', 'rgba(255,255,255, 0.18)');
+			$('#dataviz').css('background-color', 'rgba(255,255,255, 0.18)');
+			$('#clusterviz').css('background-color', 'rgba(255,255,255, 0)');
 			dataviz_clicked = false;
 			heatmap_clicked = false;
 			clusterviz_clicked = true;
