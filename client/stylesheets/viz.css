@@ -306,26 +306,29 @@ select {
 
   bottom: 50%;
   margin-bottom: -320px;
-  /*bottom: 30px;*/
 }
 
 #about_page {
   font-family: 'HelveticaN', sans-serif;
-  /*font-family: 'neue', sans-serif;*/
-  /*background-color: rgba(0,0,0,0.8);*/
-  background-color: rgba(255,255,255,0.88);
+
+  background-color: rgba(255,255,255,0.92);
   color: black;
   font-size: 12px;
   line-height: 152%;
 
-  padding: 36px;
+  padding: 32px;
   border-radius: 10px;
   position: absolute;
   z-index: 700;
-  width: 52%;
-
+  
   left: -110%;
   visibility: visible;
+  
+  /*width: 52%;*/
+  width: 720px;
+  height: 502px;
+  bottom: 50%;
+  margin-bottom: -320px;
 }
 
 .title_official {

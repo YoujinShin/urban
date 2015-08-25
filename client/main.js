@@ -289,10 +289,10 @@ showAboutPage = function() {
 
 	// var about_height = $('#about_page').height();
 	// var about_bottom = ( $(window).height() - about_height ) /2;
-	var indicator_bottom = $('.indicators').css('bottom');
+	// var indicator_bottom = $('.indicators').css('bottom');
 
-	console.log(indicator_bottom);
-	d3.select('#about_page').style('bottom', $(window).height()*0.044+ 'px');
+	// console.log(indicator_bottom);
+	// d3.select('#about_page').style('bottom', $(window).height()*0.044+ 'px');
 }
 
 hideAbourPage = function() {
