@@ -100,19 +100,17 @@
 }
 
 select {
-  font-family: 'HelveticaN', sans-serif;
+  font-family: 'HelveticaN', 'HelveticaN_IE', sans-serif;
   text-align: right !important;
   font-size: 12px;
   letter-spacing: 2px;
 }
 
 #index_collection {
-  /*font-family: 'neue', sans-serif;*/
-  font-family: 'HelveticaN', sans-serif;
+  font-family: 'HelveticaN','HelveticaN_IE', sans-serif;
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: 300;
-  /*text-transform: uppercase;*/
 
   position: absolute;
   z-index: 300;
@@ -124,12 +122,10 @@ select {
 }
 
 #title_cluster {
-  /*font-family: 'neue', sans-serif;*/
-  font-family: 'HelveticaN', sans-serif;
+  font-family: 'HelveticaN', 'HelveticaN_IE', sans-serif;
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: 300;
-  /*text-transform: uppercase;*/
 
   position: absolute;
   z-index: 300;
@@ -143,7 +139,7 @@ select {
 }
 
 #index_collection_num {
-  font-family: 'HelveticaN', sans-serif;
+  font-family: 'HelveticaN', 'HelveticaN_IE', sans-serif;
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: 400;
@@ -184,11 +180,9 @@ select {
 
   top: 15%;
   margin-top: 34px;
-  /*border: solid 1px rgba(255,255,255,0.3);*/
 
   width: 20px;
   height: 4px;
-  /*border-radius: 10px;*/
   background-color: rgba(255,255,255,0.2);
 }
 
@@ -202,11 +196,9 @@ select {
 
   top: 15%;
   margin-top: 34px;
-  /*border: solid 1px rgba(255,255,255,0.3);*/
   
   width: 20px;
   height: 4px;
-  /*border-radius: 10px;*/
   background-color: rgba(255,255,255,0.2);
 }
 
@@ -220,11 +212,9 @@ select {
 
   top: 15%;
   margin-top: 34px;
-  /*border: solid 1px rgba(255,255,255,0.3);*/
   
   width: 20px;
   height: 4px;
-  /*border-radius: 10px;*/
   background-color: rgba(255,255,255,0.2);
 }
 

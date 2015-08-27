@@ -17,21 +17,17 @@ Template.map.rendered= function() {
 	map = L.map('map'+this.data._id, { zoomControl:false })
 		.setView(mapSettings.coordinates, mapSettings.zoom);
 		// .addLayer(L.mapbox.tileLayer("examples.map-20v6611k", {
-		// 	// senseable.kakb3n74
-		// 	// examples.map-20v6611k
-		// 	// senseable.a1c35c2b - new, blue
-		// 	// senseable.7a3b6785 - new, gray
-			// mapbox.light
 		// 	attribution:'',
 		// 	detectRetina: true,
 		// 	opacity: 1
 		// })
 	// );
 
-// senseable.7b82cf0f (black)
-// senseable.d3d58f5f (gray)
-// senseable.107cc94a (light gray)
-// senseable.b55c5fab (light gray with label)
+	// senseable.7b82cf0f (black)
+	// senseable.d3d58f5f (gray)
+	// senseable.107cc94a (light gray)
+	// senseable.b55c5fab (light gray with label)
+
 	var base_layer = L.mapbox.tileLayer('senseable.b55c5fab'); // mapbox.dark , mapbox.light , senseable.86caab31
 	base_layer.addTo(map);
 	base_layer.setOpacity(0.98);

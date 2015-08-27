@@ -10,10 +10,8 @@ window.officialviz_clicked = false;
 
 window.onresize = function(){ location.reload(); }
 
-$(document).ready(function() {
 
-	// var bottom = Math.floor( ( $(window).height() - 600 ) /2 );
-	// $('#viz_official').css('bottom', bottom + 'px');
+$(document).ready(function() {
 
 	// Official Viz Left
 	$('#button_nav').click(function() {
@@ -27,32 +25,6 @@ $(document).ready(function() {
 		if(about_clicked) { showAboutPage(); }
 		else { hideAbourPage(); }
 	});
-
-	// var about_height = d3.select('#about_page').style('height');
-	// var about_bottom = ( $(window).height() - about_height ) /2;
-
-	// d3.select('#about_page').style('bottom', about_bottom + 'px');
-
-	// change cluster type
-	// $('#cluster_commercial').click(function() {
-	// 	console.log('cluster commercial clicked');
-
-	// 	$('#cluster_official').css('border-color', 'rgba(255,255,255,0.3)');
-	// 	$('#cluster_official').css('color', 'rgba(255,255,255,0.3)');
-
-	// 	$('#cluster_commercial').css('border-color', 'rgba(157,184,252,0.93)')
-	// 	$('#cluster_commercial').css('color', 'rgba(157,184,252,0.93)');
-	// });
-
-	// $('#cluster_official').click(function() {
-	// 	console.log('cluster official clicked');
-
-	// 	$('#cluster_commercial').css('border-color', 'rgba(255,255,255,0.3)');
-	// 	$('#cluster_commercial').css('color', 'rgba(255,255,255,0.3)');
-
-	// 	$('#cluster_official').css('border-color', 'rgba(157,184,252,0.93)')
-	// 	$('#cluster_official').css('color', 'rgba(157,184,252,0.93)');
-	// });
 
 
 	// Round Viz
@@ -72,10 +44,6 @@ $(document).ready(function() {
 			$('#heatmap').css('background-color', 'rgba(255,255,255, 0.18)');
 			$('#dataviz').css('background-color', 'rgba(255,255,255, 0)');
 			$('#clusterviz').css('background-color', 'rgba(255,255,255, 0.18)');
-
-			// d3.select('#heatmap').style('background-color', 'rgba(0,0,0,0.18)');
-			// d3.select('#dataviz').style('background-color', 'rgba(0,0,0,0)');
-			// d3.select('#clusterviz').style('background-color', 'rgba(0,0,0,0.18)');
 
 			dataviz_clicked = true;
 			heatmap_clicked = false;
@@ -98,10 +66,6 @@ $(document).ready(function() {
 			$('#heatmap').css('background-color', 'rgba(255,255,255, 0)');
 			$('#dataviz').css('background-color', 'rgba(255,255,255, 0.18)');
 			$('#clusterviz').css('background-color', 'rgba(255,255,255, 0.18)');
-
-			// d3.select('#heatmap').style('background-color', 'rgba(0,0,0,0)');
-			// d3.select('#dataviz').style('background-color', 'rgba(0,0,0,0.18)');
-			// d3.select('#clusterviz').style('background-color', 'rgba(0,0,0,0.18)');
 
 			heatmap_clicked = true;
 			dataviz_clicked = false;
@@ -302,17 +266,4 @@ hideAbourPage = function() {
 	d3.select('#about_page').style('left', - $(window).width()*1.1 + 'px');
 	about_clicked = true;
 }
-
-
-
-// map.fitBounds(
-// 		[ 
-// 			[mapSettings.coordinates[0] - 5.2, mapSettings.coordinates[1] - 5.2], 
-// 			[mapSettings.coordinates[0] + 5.2, mapSettings.coordinates[1] + 5.2] 
-// 			// [southWest_lat, southWest_lng], [northEast_lat, northEast_lng] 
-// 		], { 
-// 			// paddingTopLeft: [0, 50]
-// 			paddingTopLeft: [-500, 50]
-// 		} // [x, y]
-// 	);
 

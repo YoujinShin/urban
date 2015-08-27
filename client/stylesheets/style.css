@@ -18,6 +18,24 @@
 	src: url(HelveticaNeue-BoldCond.otf);
 }
 
+
+/*  For Internet Explorer  */
+@font-face {
+	font-family: HelveticaNeue_IE;
+	src: url(HelveticaNeue.eot);
+}
+
+@font-face {
+	font-family: HelveticaN_IE;
+	src: url(Helvetica.eot);
+}
+
+@font-face {
+	font-family: neue_IE;
+	src: url(HelveticaNeue-BoldCond.eot);
+}
+
+
 #left_nav {
 	position: absolute;
 
@@ -47,18 +65,15 @@ body {
 h1 {
 	position: absolute;
 	top: 30px;
-	font-family: 'HelveticaN', sans-serif;
+	font-family: 'HelveticaN', 'HelveticaN_IE', sans-serif;
 	font-size: 14px;
 	letter-spacing: 1px;
-
-	
 
 	left: 20px;
 	padding: 5px;
 	padding-left: 20px;
 	padding-right: 20px;
-/*	padding-bottom: 3px;
-	padding-top: 10px;*/
+
 	font-weight: 400;
 	z-index: 100;
 	font-weight: bold;
@@ -71,7 +86,7 @@ h1 {
 h2 {
 	position: absolute;
 	top: 54px;
-	font-family: 'HelveticaN', sans-serif;
+	font-family: 'HelveticaN', 'HelveticaN_IE', sans-serif;
 	font-size: 12px;
 	left: 50px;
 	letter-spacing: 3px;
@@ -144,7 +159,7 @@ button {
 }
 
 .currentProvince {
-	font-family: 'HelveticaN', sans-serif;
+	font-family: 'HelveticaN', 'HelveticaN_IE', sans-serif;
 	background-color: rgba(63, 81, 181,0.7);
 	color: #fff;
 	padding: 18px;
@@ -164,7 +179,7 @@ button {
 	background: rgba(255,255,255,0.8);
 	z-index: 999;
 	font-size: 11px;
-	font-family: 'HelveticaN', sans-serif;
+	font-family: 'HelveticaN', 'HelveticaN_IE', sans-serif;
 }
 
 .numbers {
@@ -175,7 +190,7 @@ button {
 }
 
 .indexes {
-	font-family: 'HelveticaN', sans-serif;
+	font-family: 'HelveticaN', 'HelveticaN_IE', sans-serif;
 	fill: #000;
 	fill-opacity: 0.8;
 	font-size: 11px;
@@ -186,7 +201,7 @@ button {
 
 .index {
 	position: absolute;
-	font: 8px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font: 8px "Helvetica Neue","HelveticaNeue", "HelveticaNeue_IE", Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 	font-weight: 300;
 
@@ -210,7 +225,7 @@ button {
 
 .index_off_norm {
 	position: absolute;
-	font: 8px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font: 8px "Helvetica Neue","HelveticaNeue","HelveticaNeue_IE", Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 	font-weight: 300;
 
@@ -264,7 +279,7 @@ button {
 	border-style: solid;
 	border-width: 4px;
 	color: rgba(0,0,0,0.7);
-	font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font: 12px/20px "Helvetica Neue", "HelveticaNeue", "HelveticaNeue_IE",Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	padding: 1px 6px;
 	position: absolute;
@@ -287,7 +302,7 @@ button {
 	border-style: solid;
 	border-width: 4px;
 	color: #000;
-	font: 11px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font: 11px/20px "Helvetica Neue", "HelveticaNeue", "HelveticaNeue_IE",Arial, Helvetica, sans-serif;
 	padding: 1px 6px;
 	position: absolute;
 	-webkit-user-select: none;
@@ -372,7 +387,7 @@ button {
 	text-align: left;
 	color: #94aefc; 
 
-	font-family: 'HelveticaN', sans-serif;
+	font-family: 'HelveticaN', 'HelveticaN_IE', sans-serif;
 	text-transform: uppercase;
 
 	font-size: 11px;
@@ -394,7 +409,7 @@ button {
 	color: rgba(255,255,255,0.7);
 	margin-right: 3%;
 
-	font-family: 'HelveticaN', sans-serif;
+	font-family: 'HelveticaN', 'HelveticaN_IE',sans-serif;
 	font-size: 10px;
 	letter-spacing: 1px;
 	fill: #000;
@@ -436,7 +451,7 @@ button {
 	z-index: 100;
 
 	background-color: rgba(38, 40, 60, 0.4);
-	font-family: 'HelveticaN', sans-serif;
+	font-family: 'HelveticaN', 'HelveticaN_IE',sans-serif;
 	font-size: 10px;
 	letter-spacing: 1px;
 	color: rgba(255,255,255,1);

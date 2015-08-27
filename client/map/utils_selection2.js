@@ -24,6 +24,7 @@ mouseOutLayer2 = function(e) {
 	setLayerStyle2(e.target, "out");
 
 	mouseoutBar(infos);
+	console.log('mouse out layer');
 }
 
 // bar - mouseover interaction

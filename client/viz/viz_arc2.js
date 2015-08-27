@@ -39,7 +39,6 @@ window.selectedLegend;
 window.clusterC;
 window.clusterO;
 
-
 window.selectedArray = [];
 
 Template.viz.rendered = function() {
@@ -51,6 +50,7 @@ Template.viz.rendered = function() {
 		.html("Commercial Index :: <span id='col_name' style='color:white'>Business Oriented</span>");// 
 		// .html("COMMERCIAL INDEX");// 
 		// .html("Commercial Index <span style='font-weight:300'> Collection </span>");
+
 
 	body.append('div').attr('id', 'title_cluster')
 		.html('Clusters');
@@ -160,8 +160,6 @@ Template.viz.rendered = function() {
 		.style("visibility", "hidden");
 
 
-
-
 	queue() 
 		.defer(d3.csv, '/data_0722/business.csv')
 		.defer(d3.csv, '/data_0722/business_legend.csv')
@@ -175,7 +173,6 @@ Template.viz.rendered = function() {
 		.defer(d3.csv, '/data_0722/cluster_kmean_commericial_province_new.csv')
 		.defer(d3.csv, '/data_0722/cluster_kmean_official_province_new.csv')
 		.await(renderViz);
-
 
 
 	function renderViz(error, data_1, legend_1, data_2, legend_2, data_3, legend_3, official_i, official_norm_i, official_legend_i, clusterC_i, clusterO_i) { 
