@@ -254,8 +254,8 @@ showOfficialViz_left = function() {
 
 	map.fitBounds(
 		[ 
-			[mapSettings.coordinates[0] - 4, mapSettings.coordinates[1] - 4], 
-			[mapSettings.coordinates[0] + 4, mapSettings.coordinates[1] + 4] 
+			[mapSettings.coordinates[0] - 5.2, mapSettings.coordinates[1] - 5.2], 
+			[mapSettings.coordinates[0] + 5.2, mapSettings.coordinates[1] + 5.2] 
 		], { 
 			paddingTopLeft: [-320, 50]
 		} // [x, y]
@@ -271,8 +271,8 @@ hideOfficialViz_left = function() {
 
 	map.fitBounds(
 		[ 
-			[mapSettings.coordinates[0] - 4, mapSettings.coordinates[1] - 4], 
-			[mapSettings.coordinates[0] + 4, mapSettings.coordinates[1] + 4] 
+			[mapSettings.coordinates[0] - 5.2, mapSettings.coordinates[1] - 5.2], 
+			[mapSettings.coordinates[0] + 5.2, mapSettings.coordinates[1] + 5.2] 
 		], { 
 			paddingTopLeft: [-500, 50]
 		} // [x, y]
@@ -305,5 +305,14 @@ hideAbourPage = function() {
 
 
 
-
+// map.fitBounds(
+// 		[ 
+// 			[mapSettings.coordinates[0] - 5.2, mapSettings.coordinates[1] - 5.2], 
+// 			[mapSettings.coordinates[0] + 5.2, mapSettings.coordinates[1] + 5.2] 
+// 			// [southWest_lat, southWest_lng], [northEast_lat, northEast_lng] 
+// 		], { 
+// 			// paddingTopLeft: [0, 50]
+// 			paddingTopLeft: [-500, 50]
+// 		} // [x, y]
+// 	);
 
