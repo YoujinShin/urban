@@ -65,6 +65,9 @@ Template.map.rendered= function() {
 	var northEast_lat = shapeLayer.getBounds()._northEast.lat;
 	var northEast_lng = shapeLayer.getBounds()._northEast.lng;
 
+	console.log($(window).width() / 6);
+	var temp_left = $(window).width() / 3;
+
 	map.fitBounds(
 		[ 
 			[mapSettings.coordinates[0] - 5.2, mapSettings.coordinates[1] - 5.2], 
@@ -72,7 +75,8 @@ Template.map.rendered= function() {
 			// [southWest_lat, southWest_lng], [northEast_lat, northEast_lng] 
 		], { 
 			// paddingTopLeft: [0, 50]
-			paddingTopLeft: [-500, 50]
+			// paddingTopLeft: [-500, 50] //
+			paddingTopLeft: [-temp_left, 50]
 		} // [x, y]
 	);
 	// selectOneProvince();

@@ -216,12 +216,15 @@ showOfficialViz_left = function() {
 	d3.select('#viz_official').style('left', 76 + 'px');
 	button_clicked = false;
 
+	var temp_left = $(window).width() / 3;
+
 	map.fitBounds(
 		[ 
 			[mapSettings.coordinates[0] - 5.2, mapSettings.coordinates[1] - 5.2], 
 			[mapSettings.coordinates[0] + 5.2, mapSettings.coordinates[1] + 5.2] 
 		], { 
-			paddingTopLeft: [-320, 50]
+			// paddingTopLeft: [-320, 50]
+			paddingTopLeft: [-temp_left + 200, 50]
 		} // [x, y]
 	);
 }
@@ -233,12 +236,15 @@ hideOfficialViz_left = function() {
 	d3.select('#viz_official').style('left', -200 + 'px');
 	button_clicked = true;
 
+	var temp_left = $(window).width() / 3;
+
 	map.fitBounds(
 		[ 
 			[mapSettings.coordinates[0] - 5.2, mapSettings.coordinates[1] - 5.2], 
 			[mapSettings.coordinates[0] + 5.2, mapSettings.coordinates[1] + 5.2] 
 		], { 
-			paddingTopLeft: [-500, 50]
+			// paddingTopLeft: [-500, 50]
+			paddingTopLeft: [-temp_left, 50]
 		} // [x, y]
 	);
 }
@@ -250,13 +256,6 @@ showAboutPage = function() {
 	d3.select('#about_nav').style('background-color', 'rgba(0,0,0,0.6)');
 	d3.select('#about_page').style('left', 76 + 'px');
 	about_clicked = false;
-
-	// var about_height = $('#about_page').height();
-	// var about_bottom = ( $(window).height() - about_height ) /2;
-	// var indicator_bottom = $('.indicators').css('bottom');
-
-	// console.log(indicator_bottom);
-	// d3.select('#about_page').style('bottom', $(window).height()*0.044+ 'px');
 }
 
 hideAbourPage = function() {
